@@ -79,6 +79,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[scriptbot脚本批处理程序开发]]></title>
+    <url>%2Fcode%2Fscriptbot%2F</url>
+    <content type="text"><![CDATA[ScriptBot 是一个采用sring boot框架开发的 脚本批处理工具，是博主开发的一个简单的自用工具本文意在通过该项目来总结一些Spring boot的web项目的开发经验 相关文章 参考资料 前端开发零碎TIPS cookie必须设置过期时间，cookie如果再没有设置期限的条件下如果关闭本浏览器就会自动的清除掉了cookie的值了。 如何让div成为背景层 12&lt;div style="position:absolute;z-index:-1;width: 100%;height: 100%" &gt;&lt;/div&gt; 判断一个变量是否存在，如果没有就给他一个初始值 123456var attr = attr || "";function Foo(option) &#123; var defaultValue = option || &#123;&#125;;&#125;Foo(); AngularJS路由系列(2)–刷新、查看路由,路由事件和URL格式，获取路由参数，路由的Resolve 刷新当前路由页面12345678910111213//刷新当前路由页面(function()&#123; angular.module('app') .controller('HomeController',['dataService','notifier', '$route', '$log', HomeController]); function HomeController(dataService, notifier, $route, $log)&#123; var vm = this; vm.message = 'Welcome to School Buddy!'; //重新刷新路由 vm.refresh = function()&#123; $route.reload(); &#125; &#125;&#125;());]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>scriptbot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scriptbot脚本批处理程序开发 - 参考资料]]></title>
     <url>%2Fcode%2Fscriptbot-refer%2F</url>
     <content type="text"><![CDATA[本文是scriptbot项目开发中的参考资料 相关文章scriptbot脚本批处理程序开发 cookie的path值的默认规则当cookie的path设置了值不为null的时候，以设置的值为准。当cookie的path为null时候，获取请求的URI的path值当URI的path值是以“/”结尾的时候，直接设置为cookie的path值当URI的path值不是以“/”结尾的时候，查看path里面是否有“/”如果有“/”的话，直接截取到最后一个“/”，然后设置为cookie的path值。如果没有“/”的话，将cookie的path设置为”/”。 前端零碎_.debounce_.debounce 用于限制函数的访问频率，在Underscore和loadash库中均有。浅谈 Underscore.js 中 _.throttle 和 _.debounce 1234567891011121314151617181920&lt;!-- 一个在vue中监控变量值变化的例子 --&gt;&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;&lt;script src="https://cdn.bootcss.com/underscore.js/1.9.0/underscore-min.js"&gt;&lt;/script&gt;&lt;div id="app"&gt; &lt;input v-model="question"&gt;&lt;/div&gt;&lt;script&gt;var vm = new Vue(&#123; el: '#app', data: &#123; question: "" &#125;);var log=_.debounce(function () &#123; console.log("changed"); &#125;,500);vm.$watch('question', function() &#123; console.log('wating'); log();&#125;);&lt;/script&gt; js中的箭头函数和匿名函数：以this为例子，对于普通函数（包括匿名函数），this指的是直接的调用者，在非严格模式下，如果没有直接调用者，this指的是window。箭头函数是没有自己的this，在它内部使用的this是由它定义的宿主对象决定。Vue实例里this的使用 不要在选项属性或回调上使用箭头函数，比如 created: () =&gt; console.log(this.a) 或 vm.$watch(&#39;a&#39;, newValue =&gt; this.myMethod())。因为箭头函数是和父级上下文绑定在一起的，this 不会是如你所预期的 Vue 实例，经常导致 Uncaught TypeError: Cannot read property of undefined 或 Uncaught TypeError: this.myMethod is not a function 之类的错误。 vue官方文档cn.vuejs.org/v2/guide/instance.html#实例生命周期钩子 跨域请求 携带cookieAngularjs之如何在跨域请求中传输Cookie跨域Ajax请求时是否带Cookie的设置 - CSDN博客解决cookie跨域访问 - 小眼儿 - 博客园服务器端 Access-Control-Allow-Credentials = true时，参数Access-Control-Allow-Origin 的值不能为 ‘*’ js css 前端特效动画特效站点网页特效库-html5 css3动画-banner特效-jquery特效代码CircularProgressButtonTutorialzine Shape Shifter-文字粒子特效-支持各种命令的粒子特效 impress.js 可以制作出类似prezi.com中的一张大图的幻灯片效果impress/impress.js 前端工具资料入门Webpack，看这篇就够了入门 Webpack，看这篇就够了 - 前端学习笔记 - SegmentFault 思否 node , 是javascript语言的环境和平台， npm , bower, yarn 是一类，包管理， webpack , browserify , rollup是一类，javascript模块打包方案(方案+工具+插件)， babel , 编译(compiler)下一代的ES语法的插件- requirejs , seajs , 是一类, 基于commonjs，amd，cmd，umd 之类的模块类包加载方案的框架， grunt , gulp , 前端工具，结合插件，合并、压缩、编译 sass/less，browser 自动载入资源， react , angular , vue , backbone , 是一类，mvc , mvvm , mvp 之类的前端框架， jquery , zepto , prototype , 是一类，前端 DOM , BOM 类库 ， ext , yui , kissy , dojo , 是一类，前端应用组件， lodash , underscore , 函数式编程库。 来源：https://www.zhihu.com/question/37694275/answer/113609266 后端Spring boot 定时任务SpringBoot定时任务及Cron表达式详解 fixedDelay和fixedRate区别：fixedDelay 在上一次执行结束后，等待xx毫秒后执行下一次fixedRate 每间隔xx毫秒执行下一次任务，如果到了下一个任务执行的时间但是上一个任务还未结束，那么上一个任务结束后立即执行该次任务。 crontab表达式1234567891011121314// spring的 表达式与linux的有所不同秒：可出现&quot;, - * /&quot;四个字符，有效范围为0-59的整数分：可出现&quot;, - * /&quot;四个字符，有效范围为0-59的整数时：可出现&quot;, - * /&quot;四个字符，有效范围为0-23的整数每月第几天：可出现&quot;, - * / ? L W C&quot;八个字符，有效范围为0-31的整数月：可出现&quot;, - * /&quot;四个字符，有效范围为1-12的整数或JAN-DEC星期：可出现&quot;, - * / ? L C #&quot;四个字符，有效范围为1-7的整数或SUN-SAT两个范围。1表示星期天，2表示星期一， 依次类推&quot;0 0 * * * *&quot; 表示每小时0分0秒执行一次&quot; */10 * * * * *&quot; 表示每10秒执行一次&quot;0 0 8-10 * * *&quot; 表示每天8，9，10点执行&quot;0 0/30 8-10 * * *&quot; 表示每天8点到10点，每半小时执行&quot;0 0 9-17 * * MON-FRI&quot; 表示每周一至周五，9点到17点的0分0秒执行&quot;0 0 0 25 12 ?&quot; 表示每年圣诞节（12月25日）0时0分0秒执行]]></content>
@@ -100,18 +112,6 @@
       <tags>
         <tag>code</tag>
         <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[scriptbot脚本批处理程序开发]]></title>
-    <url>%2Fcode%2Fscriptbot%2F</url>
-    <content type="text"><![CDATA[ScriptBot 是一个采用sring boot框架开发的 脚本批处理工具，是博主开发的一个简单的自用工具本文意在通过该项目来总结一些Spring boot的web项目的开发经验 相关文章 参考资料 前端开发零碎TIPS cookie必须设置过期时间，cookie如果再没有设置期限的条件下如果关闭本浏览器就会自动的清除掉了cookie的值了。 如何让div成为背景层 12&lt;div style="position:absolute;z-index:-1;width: 100%;height: 100%" &gt;&lt;/div&gt; 判断一个变量是否存在，如果没有就给他一个初始值 123456var attr = attr || "";function Foo(option) &#123; var defaultValue = option || &#123;&#125;;&#125;Foo(); AngularJS路由系列(2)–刷新、查看路由,路由事件和URL格式，获取路由参数，路由的Resolve 刷新当前路由页面12345678910111213//刷新当前路由页面(function()&#123; angular.module('app') .controller('HomeController',['dataService','notifier', '$route', '$log', HomeController]); function HomeController(dataService, notifier, $route, $log)&#123; var vm = this; vm.message = 'Welcome to School Buddy!'; //重新刷新路由 vm.refresh = function()&#123; $route.reload(); &#125; &#125;&#125;());]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>scriptbot</tag>
       </tags>
   </entry>
   <entry>
@@ -158,18 +158,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[js 学习之路]]></title>
-    <url>%2Fcode%2Fjs%E4%B9%8B%E8%B7%AF%2F</url>
-    <content type="text"><![CDATA[札记js中(function(){…})()立即执行函数写法理解js中(function(){…})()立即执行函数写法理解 - 生活还是要继续 - 博客园]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[IntelliJ IDEA 之路]]></title>
     <url>%2Fcode%2Fidea%E4%B9%8B%E8%B7%AF%2F</url>
     <content type="text"><![CDATA[新特性 2018.1 debug模式模拟抛出异常 http请求工具 其他特性 idea是博主最爱没有之一的开发工具，应该说jetbrains的开发工具都是非常棒的，idea的新特性在不停的增加，每次阅读更新日志都是一种享受像发现了新的玩具，2018年4月23这一天，本人决定开始记录idea使用过程中一些有价值的东西有些更新的特性可能不是严格按照idea本身的版本来编排的，主要是按照博主本人发现这个特性的时间来编写,文档从2018年4月23开始编写，会逐步补充该时间之前的一些内容 技巧@NotNull AnnotationsAnnotating Source Code - Help | IntelliJ IDEA idea有一个annotation.jar提供了一些有帮助的注解，其中包括了@NotNull检查的注解,该注解与lombok的@NonNull注解类似，会在编译代码时增加一个空指针检查，但是比lombok好的地方在于配合idea开发工具，会直接在开发界面提示空指针错误，以及在inspect code时提示可能的bug 如图所示，idea的非空注解会有inspection的提示执行Analyze-&gt;Inspect Code后也会得到bug提示 新特性2018.1 IntelliJ IDEA 2018.1.1 (Ultimate Edition)Build #IU-181.4445.78, built on April 10, 2018macOS 10.13.4 What’s New in IntelliJ IDEA debug模式模拟抛出异常可以在debug的断点位置模拟异常抛出，很实用 Throw ExceptionIntelliJ IDEA 2018.1 has a new Throw Exception action that allows you to throw an exception from a certain location in your program without changing the code. It is available from the Run | Throw Exception menu, or from the frame context menu during a debugging session. http请求工具可以直接将@RequestMapping和@GetMapping注解的方法生成http请求可以查阅示例文件(Tools|HTTP Client|Open HTTP Requests Collection)HTTP Client in IntelliJ IDEA Code Editor - Help | IntelliJ IDEAAccess HTTP request mappings from the editor via the new REST clientNow, after you run a Spring Boot web application, a new icon is shown in the gutter for methods with @RequestMapping annotations that handle incoming HTTP requests. Click this gutter icon to open all the mappings in a scratch file with an .http extension and perform an HTTP request in the editor via the new REST client. For methods with @GetMapping annotations, you have the choice to open the mapped URLs in a browser, or open a request in the HTTP Request Editor. Note, that you need to add the dependency for the spring-boot-starter-actuator to your pom.xml or build.gradle file. 其他特性代码可以按行提交了(git add -p)]]></content>
@@ -179,6 +167,18 @@
       <tags>
         <tag>code</tag>
         <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js 学习之路]]></title>
+    <url>%2Fcode%2Fjs%E4%B9%8B%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[札记js中(function(){…})()立即执行函数写法理解js中(function(){…})()立即执行函数写法理解 - 生活还是要继续 - 博客园]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -239,6 +239,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[搭建个人博客-hexo博客]]></title>
+    <url>%2Ftech%2Fbuild-blog%2F</url>
+    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo优化]]></title>
     <url>%2Ftech%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
     <content type="text"><![CDATA[HTTP vs HTTPS 对SEO的影响 加载速度 图片格式选择与压缩图片 压缩图片是最简单的方法，在线图片压缩 选择一个合适的图片格式 细节调整 markdown渲染时锚点链接大小写问题 HTTP vs HTTPS 对SEO的影响百度搜索引擎认为权值相同的站点，采用https协议的页面更加安全，排名上会优先对待 百度站长百度开放收录https站点公告 HTTP vs HTTPS 对SEO的影响？ - 知乎 加载速度参考：免费CDN和网站速度测试工具 CDN:jsdelivr 前端公共库CDN加速服务 图片格式选择与压缩图片除了使用图床之外，有时候也有一些站内的图片，比如avatar头像等，选择一个合适的图片格式尽可能的减小图片体积。 压缩图片是最简单的方法，在线图片压缩图好快 :国内，支持很丰富的场景和格式，收费TinyPNG:国外，可以压缩png和jpg格式图片，免费 选择一个合适的图片格式jpg gif png格式比较与简单描述： 格式 描述 如何选 gif 全称JPEG，具有较高的压缩率，有损压缩格式，可以指定压缩的百分比，方便把控图片尺寸和质量的比例，不支持透明格式 支持动画效果，提交较小 jpg 有静态gif和动态gif，体积小，早期网速较慢时使用很流行 可以保留图片更多的色彩细节，对于色彩丰富的图片推荐使用 png 为了取代git和jpg而诞生的格式，与gif比支持更丰富的透明度（gif只有透明与不透明），与png比可以在保留图片所有细节的前提下实现高压缩比的图片压缩，是无损压缩 支持透明，对于一些色彩简单的，纯色块较多的图片推荐使用 总结：选择什么格式自己试一下就好了，博主为了尽量在保证质量的情况下减少本博客的avatar(头像)的大小，可以说是各种格式的图片不同的压缩比都反复尝试了，来回对比之后终于选定了一个“中等压缩质量”的“jpg“图片 博主对图片没有太多涉猎,以上主要参考了横向对比GIF/JPEG/PNG/SVG，教你如何合理选择图像格式一文，以及结合了一些自己的理解。 细节调整markdown渲染时锚点链接大小写问题以下是hexo-renderer-marked插件的README说明，其中modifyAnchors设置用于将markdown的标题转为锚点链接时大小写问题，一般来说id字段我们都是用小写配置，这样对其他程序兼容性更好些，因此推荐设置为1,默认是不改变大小写 You can configure this plugin in _config.yml. 12345678910marked: gfm: true pedantic: false sanitize: false tables: true breaks: true smartLists: true smartypants: true modifyAnchors: '' autolink: true gfm - Enables GitHub flavored markdown pedantic - Conform to obscure parts of markdown.pl as much as possible. Don’t fix any of the original markdown bugs or poor behavior. sanitize - Sanitize the output. Ignore any HTML that has been input. tables - Enable GFM tables. This option requires the gfm option to be true. breaks - Enable GFM line breaks. This option requires the gfm option to be true. smartLists - Use smarter list behavior than the original markdown. smartypants - Use “smart” typograhic punctuation for things like quotes and dashes. modifyAnchors - Use for transform anchorIds. if 1 to lowerCase and if 2 to upperCase. autolink - Enable autolink for URLs. E.g. https://hexo.io will become &lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt;.]]></content>
@@ -250,14 +261,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建个人博客-hexo博客]]></title>
-    <url>%2Ftech%2Fbuild-blog%2F</url>
-    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
+    <title><![CDATA[asciinema之-linux系统下屏幕分享的一种思路]]></title>
+    <url>%2Ftech%2Fasciinema%2F</url>
+    <content type="text"><![CDATA[占坑，待补充]]></content>
       <categories>
         <category>tech</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>asciinema</tag>
       </tags>
   </entry>
   <entry>
