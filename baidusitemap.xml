@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
+    <lastmod>2018-08-31T19:52:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>asciinema之-linux系统下屏幕分享的一种思路</title>
+        <pubTime>2018-08-31T19:52:22.000Z</pubTime>
+        
+        <tag>asciinema</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="http://rizon.top/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rizon.top/tech/centos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-08-31T12:57:28.000Z</lastmod>
     <data>
@@ -24,11 +44,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker-volume/</loc>
+    <loc>http://rizon.top/code/docker/docker/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路——数据卷轴</title>
+        <title>docker之路</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -36,7 +56,7 @@
          
            
              
-              <breadCrumb title="code,road" url="http://rizon.top/categories/code-road/"/>
+              <breadCrumb title="road" url="http://rizon.top/categories/road/"/>
           
         </display>
     </data>
@@ -44,11 +64,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker/</loc>
+    <loc>http://rizon.top/code/docker/docker-volume/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路</title>
+        <title>docker之路——数据卷轴</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -167,6 +187,28 @@
 
     
   <url>
+    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>vue学习之路</title>
+        <pubTime>2018-05-17T09:57:57.000Z</pubTime>
+        
+        <tag>code</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="code" url="http://rizon.top/categories/code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rizon.top/code/scriptbot-refer/</loc>
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     <data>
@@ -199,28 +241,6 @@
         <tag>code</tag>
          
         <tag>scriptbot</tag>
-         
-         
-           
-             
-              <breadCrumb title="code" url="http://rizon.top/categories/code/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>vue学习之路</title>
-        <pubTime>2018-05-17T09:57:57.000Z</pubTime>
-        
-        <tag>code</tag>
-         
-        <tag>vue</tag>
          
          
            
@@ -467,26 +487,6 @@
 
     
   <url>
-    <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
-    <lastmod>2018-03-23T03:42:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>asciinema之-linux系统下屏幕分享的一种思路</title>
-        <pubTime>2018-03-23T03:42:17.000Z</pubTime>
-        
-        <tag>asciinema</tag>
-         
-         
-           
-             
-              <breadCrumb title="tech" url="http://rizon.top/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://rizon.top/tech/build-blog/</loc>
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     <data>
@@ -586,11 +586,11 @@
     
     
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>示例页面</title>
+        <title>Hello World</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
@@ -606,11 +606,11 @@
 
     
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>示例页面</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>

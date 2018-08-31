@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
+    
+    <lastmod>2018-08-31T19:52:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/tech/centos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2018-08-31T12:57:28.000Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/docker/docker-volume/</loc>
+    <loc>http://rizon.top/code/docker/docker/</loc>
     
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/code/docker/docker/</loc>
+    <loc>http://rizon.top/code/docker/docker-volume/</loc>
     
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     
@@ -65,6 +72,13 @@
   </url>
   
   <url>
+    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/code/scriptbot-refer/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
@@ -73,13 +87,6 @@
   
   <url>
     <loc>http://rizon.top/code/scriptbot/</loc>
-    
-    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
@@ -191,13 +198,6 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
-    
-    <lastmod>2018-03-23T03:42:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rizon.top/tech/build-blog/</loc>
     
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
