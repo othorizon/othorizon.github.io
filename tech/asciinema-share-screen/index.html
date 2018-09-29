@@ -486,8 +486,10 @@
         <p>借助asciinema 实现linux系统下的屏幕分享<br>占坑，待补充</p>
 <a id="more"></a>
 <p>demo1<br><img src="../../assets/images/asciinema/demo1.gif" alt="demo1"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># viewing terminal (hostname: node123)</span></span><br><span class="line">nc -l localhost 9999</span><br><span class="line"></span><br><span class="line"><span class="comment"># recording terminal</span></span><br><span class="line">asciinema rec --raw &gt;(nc node123 9999)</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://blog.csdn.net/freeking101/article/details/53289198" rel="external nofollow noopener noreferrer" target="_blank">linux nc命令 - CSDN博客</a></p>
 <p>demo2<br><img src="../../assets/images/asciinema/demo2.gif" alt="demo2"></p>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># recording terminal</span></span><br><span class="line">mkfifo /tmp/demo.pipe</span><br><span class="line">asciinema rec --raw /tmp/demo.pipe</span><br><span class="line"></span><br><span class="line"><span class="comment"># viewing terminal</span></span><br><span class="line">ssh root@install_demo cat ~/demo.pipe</span><br></pre></td></tr></table></figure>
       
     </div>
 

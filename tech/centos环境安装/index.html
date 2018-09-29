@@ -502,6 +502,10 @@
 <p><strong>安装 docker-compose</strong></p>
 <p>官方文档：<a href="https://docs.docker.com/compose/install/" rel="external nofollow noopener noreferrer" target="_blank">https://docs.docker.com/compose/install/</a><br>step1:<br>注意这里的版本号，最新版请从这里获取<a href="https://github.com/docker/compose/releases" rel="external nofollow noopener noreferrer" target="_blank">Compose repository release page on GitHub</a><br><code>curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose</code><br>step2:添加可执行权限<br><code>chmod +x /usr/local/bin/docker-compose</code></p>
 <p><code>docker-compose --version</code></p>
+<p>step3: [可选] 安装 命令行提示<br><a href="https://docs.docker.com/compose/completion/" rel="external nofollow noopener noreferrer" target="_blank">Command-line completion</a></p>
+<p><strong>使用国内docker仓库源</strong></p>
+<p>针对Docker客户端版本大于 1.10.0 的用户<br>您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器(没有这个文件可以创建)<br>从这个地址获取aliyun专属源地址:<a href="https://cr.console.aliyun.com/cn-hangzhou/mirrors" rel="external nofollow noopener noreferrer" target="_blank">https://cr.console.aliyun.com/cn-hangzhou/mirrors</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="string">'EOF'</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"registry-mirrors"</span>: [<span class="string">"https://****.mirror.aliyuncs.com"</span>,<span class="string">"https://registry.docker-cn.com"</span>,<span class="string">"https://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
 <h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><p>参考：<a href="https://www.jianshu.com/p/1cad13e57c43" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/1cad13e57c43</a></p>
 <p>step1:添加CentOS 7 EPEL 仓库<br><code>yum install epel-release</code><br>step2:安装Nginx<br><code>yum install nginx</code></p>
 <script src="/assets/asciinema-player.js"></script>
@@ -552,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/code/docker/docker-volume/" rel="next" title="docker之路——数据卷轴">
-                <i class="fa fa-chevron-left"></i> docker之路——数据卷轴
+              <a href="/code/docker/docker/" rel="next" title="docker之路">
+                <i class="fa fa-chevron-left"></i> docker之路
               </a>
             
           </div>
