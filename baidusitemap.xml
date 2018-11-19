@@ -44,11 +44,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker/</loc>
+    <loc>http://rizon.top/code/docker/docker-volume/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路</title>
+        <title>docker之路——数据卷轴</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -64,11 +64,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker-volume/</loc>
+    <loc>http://rizon.top/code/docker/docker/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路——数据卷轴</title>
+        <title>docker之路</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -487,11 +487,11 @@
 
     
   <url>
-    <loc>http://rizon.top/tech/build-blog/</loc>
+    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     <data>
         <display>
-        <title>搭建个人博客-hexo博客</title>
+        <title>hexo优化</title>
         <pubTime>2018-03-23T03:42:17.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -507,11 +507,11 @@
 
     
   <url>
-    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
+    <loc>http://rizon.top/tech/build-blog/</loc>
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     <data>
         <display>
-        <title>hexo优化</title>
+        <title>搭建个人博客-hexo博客</title>
         <pubTime>2018-03-23T03:42:17.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -586,11 +586,11 @@
     
     
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>示例页面</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
@@ -606,11 +606,11 @@
 
     
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>示例页面</title>
+        <title>Hello World</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
