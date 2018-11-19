@@ -72,6 +72,13 @@
   </url>
   
   <url>
+    <loc>http://rizon.top/code/scriptbot/</loc>
+    
+    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
@@ -80,13 +87,6 @@
   
   <url>
     <loc>http://rizon.top/code/scriptbot-refer/</loc>
-    
-    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rizon.top/code/scriptbot/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
