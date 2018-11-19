@@ -90,18 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[vue学习之路]]></title>
-    <url>%2Fcode%2Fvue%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[遇到的问题参考 webpack学习webpack打包在控制台不能获取变量 - 穗乃果的回答 - SegmentFault 思否 技巧懒加载参考 webpack学习vue中的懒加载-Lazy Loading in Vue using Webpack’s Code Splitting懒加载 | webpack 中文网 vuexVuex | Vuex 是什么？]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[scriptbot脚本批处理程序开发]]></title>
     <url>%2Fcode%2Fscriptbot%2F</url>
     <content type="text"><![CDATA[ScriptBot 是一个采用sring boot框架开发的 脚本批处理工具，是博主开发的一个简单的自用工具本文意在通过该项目来总结一些Spring boot的web项目的开发经验 相关文章 参考资料 前端开发零碎TIPS cookie必须设置过期时间，cookie如果再没有设置期限的条件下如果关闭本浏览器就会自动的清除掉了cookie的值了。 如何让div成为背景层 12&lt;div style="position:absolute;z-index:-1;width: 100%;height: 100%" &gt;&lt;/div&gt; 判断一个变量是否存在，如果没有就给他一个初始值 123456var attr = attr || "";function Foo(option) &#123; var defaultValue = option || &#123;&#125;;&#125;Foo(); AngularJS路由系列(2)–刷新、查看路由,路由事件和URL格式，获取路由参数，路由的Resolve 刷新当前路由页面12345678910111213//刷新当前路由页面(function()&#123; angular.module('app') .controller('HomeController',['dataService','notifier', '$route', '$log', HomeController]); function HomeController(dataService, notifier, $route, $log)&#123; var vm = this; vm.message = 'Welcome to School Buddy!'; //重新刷新路由 vm.refresh = function()&#123; $route.reload(); &#125; &#125;&#125;());]]></content>
@@ -111,6 +99,18 @@
       <tags>
         <tag>code</tag>
         <tag>scriptbot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vue学习之路]]></title>
+    <url>%2Fcode%2Fvue%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[遇到的问题参考 webpack学习webpack打包在控制台不能获取变量 - 穗乃果的回答 - SegmentFault 思否 技巧懒加载参考 webpack学习vue中的懒加载-Lazy Loading in Vue using Webpack’s Code Splitting懒加载 | webpack 中文网 vuexVuex | Vuex 是什么？]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -250,9 +250,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo优化]]></title>
-    <url>%2Ftech%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[HTTP vs HTTPS 对SEO的影响 加载速度 图片格式选择与压缩图片 压缩图片是最简单的方法，在线图片压缩 选择一个合适的图片格式 细节调整 markdown渲染时锚点链接大小写问题 HTTP vs HTTPS 对SEO的影响百度搜索引擎认为权值相同的站点，采用https协议的页面更加安全，排名上会优先对待 百度站长百度开放收录https站点公告 HTTP vs HTTPS 对SEO的影响？ - 知乎 加载速度参考：免费CDN和网站速度测试工具 CDN:jsdelivr 前端公共库CDN加速服务 图片格式选择与压缩图片除了使用图床之外，有时候也有一些站内的图片，比如avatar头像等，选择一个合适的图片格式尽可能的减小图片体积。 压缩图片是最简单的方法，在线图片压缩图好快 :国内，支持很丰富的场景和格式，收费TinyPNG:国外，可以压缩png和jpg格式图片，免费 选择一个合适的图片格式jpg gif png格式比较与简单描述： 格式 描述 如何选 gif 全称JPEG，具有较高的压缩率，有损压缩格式，可以指定压缩的百分比，方便把控图片尺寸和质量的比例，不支持透明格式 支持动画效果，提交较小 jpg 有静态gif和动态gif，体积小，早期网速较慢时使用很流行 可以保留图片更多的色彩细节，对于色彩丰富的图片推荐使用 png 为了取代git和jpg而诞生的格式，与gif比支持更丰富的透明度（gif只有透明与不透明），与png比可以在保留图片所有细节的前提下实现高压缩比的图片压缩，是无损压缩 支持透明，对于一些色彩简单的，纯色块较多的图片推荐使用 总结：选择什么格式自己试一下就好了，博主为了尽量在保证质量的情况下减少本博客的avatar(头像)的大小，可以说是各种格式的图片不同的压缩比都反复尝试了，来回对比之后终于选定了一个“中等压缩质量”的“jpg“图片 博主对图片没有太多涉猎,以上主要参考了横向对比GIF/JPEG/PNG/SVG，教你如何合理选择图像格式一文，以及结合了一些自己的理解。 细节调整markdown渲染时锚点链接大小写问题以下是hexo-renderer-marked插件的README说明，其中modifyAnchors设置用于将markdown的标题转为锚点链接时大小写问题，一般来说id字段我们都是用小写配置，这样对其他程序兼容性更好些，因此推荐设置为1,默认是不改变大小写 You can configure this plugin in _config.yml. 12345678910marked: gfm: true pedantic: false sanitize: false tables: true breaks: true smartLists: true smartypants: true modifyAnchors: '' autolink: true gfm - Enables GitHub flavored markdown pedantic - Conform to obscure parts of markdown.pl as much as possible. Don’t fix any of the original markdown bugs or poor behavior. sanitize - Sanitize the output. Ignore any HTML that has been input. tables - Enable GFM tables. This option requires the gfm option to be true. breaks - Enable GFM line breaks. This option requires the gfm option to be true. smartLists - Use smarter list behavior than the original markdown. smartypants - Use “smart” typograhic punctuation for things like quotes and dashes. modifyAnchors - Use for transform anchorIds. if 1 to lowerCase and if 2 to upperCase. autolink - Enable autolink for URLs. E.g. https://hexo.io will become &lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt;.]]></content>
+    <title><![CDATA[搭建个人博客-hexo博客]]></title>
+    <url>%2Ftech%2Fbuild-blog%2F</url>
+    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
       <categories>
         <category>tech</category>
       </categories>
@@ -261,9 +261,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建个人博客-hexo博客]]></title>
-    <url>%2Ftech%2Fbuild-blog%2F</url>
-    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
+    <title><![CDATA[hexo优化]]></title>
+    <url>%2Ftech%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[HTTP vs HTTPS 对SEO的影响 加载速度 图片格式选择与压缩图片 压缩图片是最简单的方法，在线图片压缩 选择一个合适的图片格式 细节调整 markdown渲染时锚点链接大小写问题 HTTP vs HTTPS 对SEO的影响百度搜索引擎认为权值相同的站点，采用https协议的页面更加安全，排名上会优先对待 百度站长百度开放收录https站点公告 HTTP vs HTTPS 对SEO的影响？ - 知乎 加载速度参考：免费CDN和网站速度测试工具 CDN:jsdelivr 前端公共库CDN加速服务 图片格式选择与压缩图片除了使用图床之外，有时候也有一些站内的图片，比如avatar头像等，选择一个合适的图片格式尽可能的减小图片体积。 压缩图片是最简单的方法，在线图片压缩图好快 :国内，支持很丰富的场景和格式，收费TinyPNG:国外，可以压缩png和jpg格式图片，免费 选择一个合适的图片格式jpg gif png格式比较与简单描述： 格式 描述 如何选 gif 全称JPEG，具有较高的压缩率，有损压缩格式，可以指定压缩的百分比，方便把控图片尺寸和质量的比例，不支持透明格式 支持动画效果，提交较小 jpg 有静态gif和动态gif，体积小，早期网速较慢时使用很流行 可以保留图片更多的色彩细节，对于色彩丰富的图片推荐使用 png 为了取代git和jpg而诞生的格式，与gif比支持更丰富的透明度（gif只有透明与不透明），与png比可以在保留图片所有细节的前提下实现高压缩比的图片压缩，是无损压缩 支持透明，对于一些色彩简单的，纯色块较多的图片推荐使用 总结：选择什么格式自己试一下就好了，博主为了尽量在保证质量的情况下减少本博客的avatar(头像)的大小，可以说是各种格式的图片不同的压缩比都反复尝试了，来回对比之后终于选定了一个“中等压缩质量”的“jpg“图片 博主对图片没有太多涉猎,以上主要参考了横向对比GIF/JPEG/PNG/SVG，教你如何合理选择图像格式一文，以及结合了一些自己的理解。 细节调整markdown渲染时锚点链接大小写问题以下是hexo-renderer-marked插件的README说明，其中modifyAnchors设置用于将markdown的标题转为锚点链接时大小写问题，一般来说id字段我们都是用小写配置，这样对其他程序兼容性更好些，因此推荐设置为1,默认是不改变大小写 You can configure this plugin in _config.yml. 12345678910marked: gfm: true pedantic: false sanitize: false tables: true breaks: true smartLists: true smartypants: true modifyAnchors: '' autolink: true gfm - Enables GitHub flavored markdown pedantic - Conform to obscure parts of markdown.pl as much as possible. Don’t fix any of the original markdown bugs or poor behavior. sanitize - Sanitize the output. Ignore any HTML that has been input. tables - Enable GFM tables. This option requires the gfm option to be true. breaks - Enable GFM line breaks. This option requires the gfm option to be true. smartLists - Use smarter list behavior than the original markdown. smartypants - Use “smart” typograhic punctuation for things like quotes and dashes. modifyAnchors - Use for transform anchorIds. if 1 to lowerCase and if 2 to upperCase. autolink - Enable autolink for URLs. E.g. https://hexo.io will become &lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt;.]]></content>
       <categories>
         <category>tech</category>
       </categories>
