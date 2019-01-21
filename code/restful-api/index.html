@@ -114,18 +114,18 @@
 
 
 
-  <meta name="description" content="RESTful API 设计规范概述">
+  <meta name="description" content="RESTful API 参考 概述 资源与URI 版本 提供链接   状态码   附加 常用状态码">
 <meta name="keywords" content="RESTful API">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RESTful API 设计规范概述">
 <meta property="og:url" content="http://rizon.top/code/restful-api/index.html">
 <meta property="og:site_name" content="地平线上">
-<meta property="og:description" content="RESTful API 设计规范概述">
+<meta property="og:description" content="RESTful API 参考 概述 资源与URI 版本 提供链接   状态码   附加 常用状态码">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-01-21T14:03:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RESTful API 设计规范概述">
-<meta name="twitter:description" content="RESTful API 设计规范概述">
+<meta name="twitter:description" content="RESTful API 参考 概述 资源与URI 版本 提供链接   状态码   附加 常用状态码">
 
 
 
@@ -464,8 +464,6 @@
           
 
           
-              <div class="post-description">RESTful API 设计规范概述</div>
-          
 
         </div>
       </header>
@@ -499,6 +497,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h1 id="restful-api"><a href="#restful-api" class="headerlink" title="RESTful API"></a>RESTful API</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://juejin.im/post/59826a4e518825359c5e72d1" rel="external nofollow noopener noreferrer" target="_blank">服务端指南 | 良好的 API 设计指南 - 掘金</a><br><a href="https://www.runoob.com/w3cnote/restful-architecture.html" rel="external nofollow noopener noreferrer" target="_blank">RESTful 架构详解 | 菜鸟教程</a><br><a href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html" rel="external nofollow noopener noreferrer" target="_blank">RESTful API 最佳实践 - 阮一峰的网络日志</a><br><a href="https://www.cnblogs.com/imyalost/p/7923230.html" rel="external nofollow noopener noreferrer" target="_blank">RESTful API浅谈 - 老_张 - 博客园</a></p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="资源与uri"><a href="#资源与uri" class="headerlink" title="资源与URI"></a>资源与URI</h3><p>动词 http  method+ 名词uri</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">【GET】          /users                # 查询用户信息列表</span><br><span class="line">【GET】          /users/1001           # 查看某个用户信息</span><br><span class="line">【POST】         /users                # 新建用户信息</span><br><span class="line">【PUT】          /users/1001           # 更新用户信息(全部字段)</span><br><span class="line">【PATCH】        /users/1001           # 更新用户信息(部分字段)</span><br><span class="line">【DELETE】       /users/1001           # 删除用户信息</span><br></pre></td></tr></table></figure>
