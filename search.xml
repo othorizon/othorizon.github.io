@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[RESTful API 设计规范概述]]></title>
+    <url>%2Fcode%2Frestful-api%2F</url>
+    <content type="text"><![CDATA[RESTful API 参考 概述 资源与URI 版本 提供链接 状态码 附加 常用状态码 RESTful API参考服务端指南 | 良好的 API 设计指南 - 掘金RESTful 架构详解 | 菜鸟教程RESTful API 最佳实践 - 阮一峰的网络日志RESTful API浅谈 - 老_张 - 博客园 概述资源与URI动词 http method+ 名词uri 123456【GET】 /users # 查询用户信息列表【GET】 /users/1001 # 查看某个用户信息【POST】 /users # 新建用户信息【PUT】 /users/1001 # 更新用户信息(全部字段)【PATCH】 /users/1001 # 更新用户信息(部分字段)【DELETE】 /users/1001 # 删除用户信息 避免多级url，而是采用过滤条件 123GET /authors/12/categories/2应该换成GET /authors/12?categories=2 使用_或-来让URI可读性更好使用/来表示资源的层级关系使用?用来过滤资源,或;可以用来表示同级资源的关系 动词的覆盖有些客户端无法支持PUT、DELETE等方法，这种情况必须使用POT来模拟，客户端可以在发出的HTTP请求中，加上X-HTTP-Method-Override属性，告诉服务器使用哪一个动词 12POST /api/Person/4 HTTP/1.1 X-HTTP-Method-Override: PUT 版本api接口升级时，为了去兼容一些暂时无法升级的客户端（比如移动端的app是运行在客户设备上，不像服务器上的客户端可以直接升级），需要保留旧版本接口。为了解决版本兼容问题，在RESTful API中使用了版本号，常见的情况下在url使用版本号，也可以在header中使用版本号，不过一般都在url中，这样更直观。 12【GET】 /v1/users/&#123;user_id&#125; // 版本 v1 的查询用户列表的 API 接口【GET】 /v2/users/&#123;user_id&#125; // 版本 v2 的查询用户列表的 API 接口 提供链接为了方便api使用者，让资源之间具有连通性（超媒体），在响应体中，返回其他资源的url 例如，GitHub 的 API 都在 https://api.github.com/ 这个域名。访问它，就可以得到其他 URL。 123456789&#123; ... "feeds_url": "https://api.github.com/feeds", "followers_url": "https://api.github.com/user/followers", "following_url": "https://api.github.com/user/following&#123;/target&#125;", "gists_url": "https://api.github.com/gists&#123;/gist_id&#125;", "hub_url": "https://api.github.com/hub", ...&#125; 在返回头中返回link 123456url -I https://api.github.com/orgs/github/reposHTTP/1.1 200 OKETag: "c4f394acb6f2603b159ee8d694d308cb"X-GitHub-Media-Type: github.v3; format=jsonLink: &lt;https://api.github.com/organizations/9919/repos?page=2&gt;; rel="next", &lt;https://api.github.com/organizations/9919/repos?page=10&gt;; rel="last" 状态码应该尽量在http状态码中表述错误状态，而不是统一使用200，统一200的方式实际上几近取消了状态码 123456789HTTP/1.1 400 Bad RequestContent-Type: application/json&#123; "error": "Invalid payoad.", "detail": &#123; "surname": "This field is required." &#125;&#125; 附加常用状态码GET安全且幂等获取表示变更时获取表示（缓存）200（OK） - 表示已在响应中发出204（无内容） - 资源有空表示301（Moved Permanently） - 资源的URI已被更新303（See Other） - 其他（如，负载均衡）304（not modified）- 资源未更改（缓存）400 （bad request）- 指代坏请求（如，参数错误）404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务端当前无法处理请求 POST不安全且不幂等使用服务端管理的（自动产生）的实例号创建资源创建子资源部分更新资源如果没有被修改，则不过更新资源（乐观锁）200（OK）- 如果现有资源已被更改201（created）- 如果新资源被创建202（accepted）- 已接受处理请求但尚未完成（异步处理）301（Moved Permanently）- 资源的URI被更新303（See Other）- 其他（如，负载均衡）400（bad request）- 指代坏请求404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示409 （conflict）- 通用冲突412 （Precondition Failed）- 前置条件失败（如执行条件更新时的冲突）415 （unsupported media type）- 接受到的表示不受支持500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务当前无法处理请求 PUT不安全但幂等用客户端管理的实例号创建一个资源通过替换的方式更新资源如果未被修改，则更新资源（乐观锁）200 （OK）- 如果已存在资源被更改201 （created）- 如果新资源被创建301（Moved Permanently）- 资源的URI已更改303 （See Other）- 其他（如，负载均衡）400 （bad request）- 指代坏请求404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示409 （conflict）- 通用冲突412 （Precondition Failed）- 前置条件失败（如执行条件更新时的冲突）415 （unsupported media type）- 接受到的表示不受支持500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务当前无法处理请求 DELETE不安全但幂等删除资源200 （OK）- 资源已被删除301 （Moved Permanently）- 资源的URI已更改303 （See Other）- 其他，如负载均衡400 （bad request）- 指代坏请求404 （not found）- 资源不存在409 （conflict）- 通用冲突500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务端当前无法处理请求]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>tool</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[asciinema之-linux系统下屏幕分享的一种思路]]></title>
     <url>%2Ftech%2Fasciinema-share-screen%2F</url>
     <content type="text"><![CDATA[借助asciinema 实现linux系统下的屏幕分享占坑，待补充 demo1 12345# viewing terminal (hostname: node123)nc -l localhost 9999# recording terminalasciinema rec --raw &gt;(nc node123 9999) 参考：linux nc命令 - CSDN博客 demo2 123456# recording terminalmkfifo /tmp/demo.pipeasciinema rec --raw /tmp/demo.pipe# viewing terminalssh root@install_demo cat ~/demo.pipe]]></content>
@@ -169,18 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[IntelliJ IDEA 之路]]></title>
-    <url>%2Fcode%2Fidea%E4%B9%8B%E8%B7%AF%2F</url>
-    <content type="text"><![CDATA[新特性 2018.1 debug模式模拟抛出异常 http请求工具 其他特性 idea是博主最爱没有之一的开发工具，应该说jetbrains的开发工具都是非常棒的，idea的新特性在不停的增加，每次阅读更新日志都是一种享受像发现了新的玩具，2018年4月23这一天，本人决定开始记录idea使用过程中一些有价值的东西有些更新的特性可能不是严格按照idea本身的版本来编排的，主要是按照博主本人发现这个特性的时间来编写,文档从2018年4月23开始编写，会逐步补充该时间之前的一些内容 技巧@NotNull AnnotationsAnnotating Source Code - Help | IntelliJ IDEA idea有一个annotation.jar提供了一些有帮助的注解，其中包括了@NotNull检查的注解,该注解与lombok的@NonNull注解类似，会在编译代码时增加一个空指针检查，但是比lombok好的地方在于配合idea开发工具，会直接在开发界面提示空指针错误，以及在inspect code时提示可能的bug 如图所示，idea的非空注解会有inspection的提示执行Analyze-&gt;Inspect Code后也会得到bug提示 新特性2018.1 IntelliJ IDEA 2018.1.1 (Ultimate Edition)Build #IU-181.4445.78, built on April 10, 2018macOS 10.13.4 What’s New in IntelliJ IDEA debug模式模拟抛出异常可以在debug的断点位置模拟异常抛出，很实用 Throw ExceptionIntelliJ IDEA 2018.1 has a new Throw Exception action that allows you to throw an exception from a certain location in your program without changing the code. It is available from the Run | Throw Exception menu, or from the frame context menu during a debugging session. http请求工具可以直接将@RequestMapping和@GetMapping注解的方法生成http请求可以查阅示例文件(Tools|HTTP Client|Open HTTP Requests Collection)HTTP Client in IntelliJ IDEA Code Editor - Help | IntelliJ IDEAAccess HTTP request mappings from the editor via the new REST clientNow, after you run a Spring Boot web application, a new icon is shown in the gutter for methods with @RequestMapping annotations that handle incoming HTTP requests. Click this gutter icon to open all the mappings in a scratch file with an .http extension and perform an HTTP request in the editor via the new REST client. For methods with @GetMapping annotations, you have the choice to open the mapped URLs in a browser, or open a request in the HTTP Request Editor. Note, that you need to add the dependency for the spring-boot-starter-actuator to your pom.xml or build.gradle file. 其他特性代码可以按行提交了(git add -p)]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>idea</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[js 学习之路]]></title>
     <url>%2Fcode%2Fjs%E4%B9%8B%E8%B7%AF%2F</url>
     <content type="text"><![CDATA[札记js中(function(){…})()立即执行函数写法理解js中(function(){…})()立即执行函数写法理解 - 生活还是要继续 - 博客园]]></content>
@@ -190,6 +190,18 @@
       <tags>
         <tag>code</tag>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[IntelliJ IDEA 之路]]></title>
+    <url>%2Fcode%2Fidea%E4%B9%8B%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[新特性 2018.1 debug模式模拟抛出异常 http请求工具 其他特性 idea是博主最爱没有之一的开发工具，应该说jetbrains的开发工具都是非常棒的，idea的新特性在不停的增加，每次阅读更新日志都是一种享受像发现了新的玩具，2018年4月23这一天，本人决定开始记录idea使用过程中一些有价值的东西有些更新的特性可能不是严格按照idea本身的版本来编排的，主要是按照博主本人发现这个特性的时间来编写,文档从2018年4月23开始编写，会逐步补充该时间之前的一些内容 技巧@NotNull AnnotationsAnnotating Source Code - Help | IntelliJ IDEA idea有一个annotation.jar提供了一些有帮助的注解，其中包括了@NotNull检查的注解,该注解与lombok的@NonNull注解类似，会在编译代码时增加一个空指针检查，但是比lombok好的地方在于配合idea开发工具，会直接在开发界面提示空指针错误，以及在inspect code时提示可能的bug 如图所示，idea的非空注解会有inspection的提示执行Analyze-&gt;Inspect Code后也会得到bug提示 新特性2018.1 IntelliJ IDEA 2018.1.1 (Ultimate Edition)Build #IU-181.4445.78, built on April 10, 2018macOS 10.13.4 What’s New in IntelliJ IDEA debug模式模拟抛出异常可以在debug的断点位置模拟异常抛出，很实用 Throw ExceptionIntelliJ IDEA 2018.1 has a new Throw Exception action that allows you to throw an exception from a certain location in your program without changing the code. It is available from the Run | Throw Exception menu, or from the frame context menu during a debugging session. http请求工具可以直接将@RequestMapping和@GetMapping注解的方法生成http请求可以查阅示例文件(Tools|HTTP Client|Open HTTP Requests Collection)HTTP Client in IntelliJ IDEA Code Editor - Help | IntelliJ IDEAAccess HTTP request mappings from the editor via the new REST clientNow, after you run a Spring Boot web application, a new icon is shown in the gutter for methods with @RequestMapping annotations that handle incoming HTTP requests. Click this gutter icon to open all the mappings in a scratch file with an .http extension and perform an HTTP request in the editor via the new REST client. For methods with @GetMapping annotations, you have the choice to open the mapped URLs in a browser, or open a request in the HTTP Request Editor. Note, that you need to add the dependency for the spring-boot-starter-actuator to your pom.xml or build.gradle file. 其他特性代码可以按行提交了(git add -p)]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>code</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -212,18 +224,6 @@
       </categories>
       <tags>
         <tag>proxy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[RESTful API 设计规范概述]]></title>
-    <url>%2Fcode%2Frestful-api%2F</url>
-    <content type="text"><![CDATA[RESTful API 参考 概述 资源与URI 版本 提供链接 状态码 附加 常用状态码 RESTful API参考服务端指南 | 良好的 API 设计指南 - 掘金RESTful 架构详解 | 菜鸟教程RESTful API 最佳实践 - 阮一峰的网络日志RESTful API浅谈 - 老_张 - 博客园 概述资源与URI动词 http method+ 名词uri 123456【GET】 /users # 查询用户信息列表【GET】 /users/1001 # 查看某个用户信息【POST】 /users # 新建用户信息【PUT】 /users/1001 # 更新用户信息(全部字段)【PATCH】 /users/1001 # 更新用户信息(部分字段)【DELETE】 /users/1001 # 删除用户信息 避免多级url，而是采用过滤条件 123GET /authors/12/categories/2应该换成GET /authors/12?categories=2 使用_或-来让URI可读性更好使用/来表示资源的层级关系使用?用来过滤资源,或;可以用来表示同级资源的关系 动词的覆盖有些客户端无法支持PUT、DELETE等方法，这种情况必须使用POT来模拟，客户端可以在发出的HTTP请求中，加上X-HTTP-Method-Override属性，告诉服务器使用哪一个动词 12POST /api/Person/4 HTTP/1.1 X-HTTP-Method-Override: PUT 版本api接口升级时，为了去兼容一些暂时无法升级的客户端（比如移动端的app是运行在客户设备上，不像服务器上的客户端可以直接升级），需要保留旧版本接口。为了解决版本兼容问题，在RESTful API中使用了版本号，常见的情况下在url使用版本号，也可以在header中使用版本号，不过一般都在url中，这样更直观。 12【GET】 /v1/users/&#123;user_id&#125; // 版本 v1 的查询用户列表的 API 接口【GET】 /v2/users/&#123;user_id&#125; // 版本 v2 的查询用户列表的 API 接口 提供链接为了方便api使用者，让资源之间具有连通性（超媒体），在响应体中，返回其他资源的url 例如，GitHub 的 API 都在 https://api.github.com/ 这个域名。访问它，就可以得到其他 URL。 123456789&#123; ... "feeds_url": "https://api.github.com/feeds", "followers_url": "https://api.github.com/user/followers", "following_url": "https://api.github.com/user/following&#123;/target&#125;", "gists_url": "https://api.github.com/gists&#123;/gist_id&#125;", "hub_url": "https://api.github.com/hub", ...&#125; 在返回头中返回link 123456url -I https://api.github.com/orgs/github/reposHTTP/1.1 200 OKETag: "c4f394acb6f2603b159ee8d694d308cb"X-GitHub-Media-Type: github.v3; format=jsonLink: &lt;https://api.github.com/organizations/9919/repos?page=2&gt;; rel="next", &lt;https://api.github.com/organizations/9919/repos?page=10&gt;; rel="last" 状态码应该尽量在http状态码中表述错误状态，而不是统一使用200，统一200的方式实际上几近取消了状态码 123456789HTTP/1.1 400 Bad RequestContent-Type: application/json&#123; "error": "Invalid payoad.", "detail": &#123; "surname": "This field is required." &#125;&#125; 附加常用状态码GET安全且幂等获取表示变更时获取表示（缓存）200（OK） - 表示已在响应中发出204（无内容） - 资源有空表示301（Moved Permanently） - 资源的URI已被更新303（See Other） - 其他（如，负载均衡）304（not modified）- 资源未更改（缓存）400 （bad request）- 指代坏请求（如，参数错误）404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务端当前无法处理请求 POST不安全且不幂等使用服务端管理的（自动产生）的实例号创建资源创建子资源部分更新资源如果没有被修改，则不过更新资源（乐观锁）200（OK）- 如果现有资源已被更改201（created）- 如果新资源被创建202（accepted）- 已接受处理请求但尚未完成（异步处理）301（Moved Permanently）- 资源的URI被更新303（See Other）- 其他（如，负载均衡）400（bad request）- 指代坏请求404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示409 （conflict）- 通用冲突412 （Precondition Failed）- 前置条件失败（如执行条件更新时的冲突）415 （unsupported media type）- 接受到的表示不受支持500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务当前无法处理请求 PUT不安全但幂等用客户端管理的实例号创建一个资源通过替换的方式更新资源如果未被修改，则更新资源（乐观锁）200 （OK）- 如果已存在资源被更改201 （created）- 如果新资源被创建301（Moved Permanently）- 资源的URI已更改303 （See Other）- 其他（如，负载均衡）400 （bad request）- 指代坏请求404 （not found）- 资源不存在406 （not acceptable）- 服务端不支持所需表示409 （conflict）- 通用冲突412 （Precondition Failed）- 前置条件失败（如执行条件更新时的冲突）415 （unsupported media type）- 接受到的表示不受支持500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务当前无法处理请求 DELETE不安全但幂等删除资源200 （OK）- 资源已被删除301 （Moved Permanently）- 资源的URI已更改303 （See Other）- 其他，如负载均衡400 （bad request）- 指代坏请求404 （not found）- 资源不存在409 （conflict）- 通用冲突500 （internal server error）- 通用错误响应503 （Service Unavailable）- 服务端当前无法处理请求]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>code</tag>
-        <tag>tool</tag>
       </tags>
   </entry>
   <entry>
@@ -262,9 +262,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建个人博客-hexo博客]]></title>
-    <url>%2Ftech%2Fbuild-blog%2F</url>
-    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
+    <title><![CDATA[hexo优化]]></title>
+    <url>%2Ftech%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[HTTP vs HTTPS 对SEO的影响 加载速度 图片格式选择与压缩图片 压缩图片是最简单的方法，在线图片压缩 选择一个合适的图片格式 细节调整 markdown渲染时锚点链接大小写问题 HTTP vs HTTPS 对SEO的影响百度搜索引擎认为权值相同的站点，采用https协议的页面更加安全，排名上会优先对待 百度站长百度开放收录https站点公告 HTTP vs HTTPS 对SEO的影响？ - 知乎 加载速度参考：免费CDN和网站速度测试工具 CDN:jsdelivr 前端公共库CDN加速服务 图片格式选择与压缩图片除了使用图床之外，有时候也有一些站内的图片，比如avatar头像等，选择一个合适的图片格式尽可能的减小图片体积。 压缩图片是最简单的方法，在线图片压缩图好快 :国内，支持很丰富的场景和格式，收费TinyPNG:国外，可以压缩png和jpg格式图片，免费 选择一个合适的图片格式jpg gif png格式比较与简单描述： 格式 描述 如何选 gif 全称JPEG，具有较高的压缩率，有损压缩格式，可以指定压缩的百分比，方便把控图片尺寸和质量的比例，不支持透明格式 支持动画效果，提交较小 jpg 有静态gif和动态gif，体积小，早期网速较慢时使用很流行 可以保留图片更多的色彩细节，对于色彩丰富的图片推荐使用 png 为了取代git和jpg而诞生的格式，与gif比支持更丰富的透明度（gif只有透明与不透明），与png比可以在保留图片所有细节的前提下实现高压缩比的图片压缩，是无损压缩 支持透明，对于一些色彩简单的，纯色块较多的图片推荐使用 总结：选择什么格式自己试一下就好了，博主为了尽量在保证质量的情况下减少本博客的avatar(头像)的大小，可以说是各种格式的图片不同的压缩比都反复尝试了，来回对比之后终于选定了一个“中等压缩质量”的“jpg“图片 博主对图片没有太多涉猎,以上主要参考了横向对比GIF/JPEG/PNG/SVG，教你如何合理选择图像格式一文，以及结合了一些自己的理解。 细节调整markdown渲染时锚点链接大小写问题以下是hexo-renderer-marked插件的README说明，其中modifyAnchors设置用于将markdown的标题转为锚点链接时大小写问题，一般来说id字段我们都是用小写配置，这样对其他程序兼容性更好些，因此推荐设置为1,默认是不改变大小写 You can configure this plugin in _config.yml. 12345678910marked: gfm: true pedantic: false sanitize: false tables: true breaks: true smartLists: true smartypants: true modifyAnchors: '' autolink: true gfm - Enables GitHub flavored markdown pedantic - Conform to obscure parts of markdown.pl as much as possible. Don’t fix any of the original markdown bugs or poor behavior. sanitize - Sanitize the output. Ignore any HTML that has been input. tables - Enable GFM tables. This option requires the gfm option to be true. breaks - Enable GFM line breaks. This option requires the gfm option to be true. smartLists - Use smarter list behavior than the original markdown. smartypants - Use “smart” typograhic punctuation for things like quotes and dashes. modifyAnchors - Use for transform anchorIds. if 1 to lowerCase and if 2 to upperCase. autolink - Enable autolink for URLs. E.g. https://hexo.io will become &lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt;.]]></content>
       <categories>
         <category>tech</category>
       </categories>
@@ -273,9 +273,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo优化]]></title>
-    <url>%2Ftech%2Fhexo%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[HTTP vs HTTPS 对SEO的影响 加载速度 图片格式选择与压缩图片 压缩图片是最简单的方法，在线图片压缩 选择一个合适的图片格式 细节调整 markdown渲染时锚点链接大小写问题 HTTP vs HTTPS 对SEO的影响百度搜索引擎认为权值相同的站点，采用https协议的页面更加安全，排名上会优先对待 百度站长百度开放收录https站点公告 HTTP vs HTTPS 对SEO的影响？ - 知乎 加载速度参考：免费CDN和网站速度测试工具 CDN:jsdelivr 前端公共库CDN加速服务 图片格式选择与压缩图片除了使用图床之外，有时候也有一些站内的图片，比如avatar头像等，选择一个合适的图片格式尽可能的减小图片体积。 压缩图片是最简单的方法，在线图片压缩图好快 :国内，支持很丰富的场景和格式，收费TinyPNG:国外，可以压缩png和jpg格式图片，免费 选择一个合适的图片格式jpg gif png格式比较与简单描述： 格式 描述 如何选 gif 全称JPEG，具有较高的压缩率，有损压缩格式，可以指定压缩的百分比，方便把控图片尺寸和质量的比例，不支持透明格式 支持动画效果，提交较小 jpg 有静态gif和动态gif，体积小，早期网速较慢时使用很流行 可以保留图片更多的色彩细节，对于色彩丰富的图片推荐使用 png 为了取代git和jpg而诞生的格式，与gif比支持更丰富的透明度（gif只有透明与不透明），与png比可以在保留图片所有细节的前提下实现高压缩比的图片压缩，是无损压缩 支持透明，对于一些色彩简单的，纯色块较多的图片推荐使用 总结：选择什么格式自己试一下就好了，博主为了尽量在保证质量的情况下减少本博客的avatar(头像)的大小，可以说是各种格式的图片不同的压缩比都反复尝试了，来回对比之后终于选定了一个“中等压缩质量”的“jpg“图片 博主对图片没有太多涉猎,以上主要参考了横向对比GIF/JPEG/PNG/SVG，教你如何合理选择图像格式一文，以及结合了一些自己的理解。 细节调整markdown渲染时锚点链接大小写问题以下是hexo-renderer-marked插件的README说明，其中modifyAnchors设置用于将markdown的标题转为锚点链接时大小写问题，一般来说id字段我们都是用小写配置，这样对其他程序兼容性更好些，因此推荐设置为1,默认是不改变大小写 You can configure this plugin in _config.yml. 12345678910marked: gfm: true pedantic: false sanitize: false tables: true breaks: true smartLists: true smartypants: true modifyAnchors: '' autolink: true gfm - Enables GitHub flavored markdown pedantic - Conform to obscure parts of markdown.pl as much as possible. Don’t fix any of the original markdown bugs or poor behavior. sanitize - Sanitize the output. Ignore any HTML that has been input. tables - Enable GFM tables. This option requires the gfm option to be true. breaks - Enable GFM line breaks. This option requires the gfm option to be true. smartLists - Use smarter list behavior than the original markdown. smartypants - Use “smart” typograhic punctuation for things like quotes and dashes. modifyAnchors - Use for transform anchorIds. if 1 to lowerCase and if 2 to upperCase. autolink - Enable autolink for URLs. E.g. https://hexo.io will become &lt;a href=&quot;https://hexo.io&quot;&gt;https://hexo.io&lt;/a&gt;.]]></content>
+    <title><![CDATA[搭建个人博客-hexo博客]]></title>
+    <url>%2Ftech%2Fbuild-blog%2F</url>
+    <content type="text"><![CDATA[1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g &amp;&amp; hexo d上传部署。2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。3、等十分钟左右，刷新浏览器，用你自己域名访问下试试 作者：skycrown链接：https://www.zhihu.com/question/31377141/answer/87541858来源：知乎著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。]]></content>
       <categories>
         <category>tech</category>
       </categories>
@@ -307,8 +307,8 @@
         <category>demo</category>
       </categories>
       <tags>
-        <tag>picture</tag>
         <tag>demo</tag>
+        <tag>picture</tag>
       </tags>
   </entry>
   <entry>

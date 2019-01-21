@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rizon.top/code/restful-api/</loc>
+    
+    <lastmod>2019-01-21T14:03:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
     
     <lastmod>2018-08-31T19:52:22.000Z</lastmod>
@@ -72,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/scriptbot-refer/</loc>
-    
-    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
@@ -87,6 +87,13 @@
   
   <url>
     <loc>http://rizon.top/code/scriptbot/</loc>
+    
+    <lastmod>2018-05-17T09:57:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://rizon.top/code/scriptbot-refer/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/restful-api/</loc>
-    
-    <lastmod>2018-03-28T14:49:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://rizon.top/baidu_verify_LgKKRszI8q.html</loc>
     
     <lastmod>2018-03-26T14:46:35.562Z</lastmod>
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
+    <loc>http://rizon.top/tech/build-blog/</loc>
     
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/tech/build-blog/</loc>
+    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
     
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     
