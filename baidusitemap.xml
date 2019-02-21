@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://rizon.top/tech/synology-nas-%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2019-02-21T13:12:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>synology-nas-搭建札记</title>
+        <pubTime>2019-02-21T13:12:44.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="tech" url="http://rizon.top/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://rizon.top/tech/mac-finder%E4%B8%8D%E8%83%BD%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E7%8A%B6%E6%80%81%E5%9B%BE%E6%A0%87/</loc>
     <lastmod>2019-02-21T12:45:12.000Z</lastmod>
     <data>
@@ -84,11 +102,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker-volume/</loc>
+    <loc>http://rizon.top/code/docker/docker/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路——数据卷轴</title>
+        <title>docker之路</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -104,11 +122,11 @@
 
     
   <url>
-    <loc>http://rizon.top/code/docker/docker/</loc>
+    <loc>http://rizon.top/code/docker/docker-volume/</loc>
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     <data>
         <display>
-        <title>docker之路</title>
+        <title>docker之路——数据卷轴</title>
         <pubTime>2018-08-31T06:04:57.000Z</pubTime>
         
         <tag>docker</tag>
@@ -227,16 +245,16 @@
 
     
   <url>
-    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://rizon.top/code/scriptbot/</loc>
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     <data>
         <display>
-        <title>vue学习之路</title>
+        <title>scriptbot脚本批处理程序开发</title>
         <pubTime>2018-05-17T09:57:57.000Z</pubTime>
         
         <tag>code</tag>
          
-        <tag>vue</tag>
+        <tag>scriptbot</tag>
          
          
            
@@ -249,16 +267,16 @@
 
     
   <url>
-    <loc>http://rizon.top/code/scriptbot/</loc>
+    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     <data>
         <display>
-        <title>scriptbot脚本批处理程序开发</title>
+        <title>vue学习之路</title>
         <pubTime>2018-05-17T09:57:57.000Z</pubTime>
         
         <tag>code</tag>
          
-        <tag>scriptbot</tag>
+        <tag>vue</tag>
          
          
            
@@ -527,11 +545,11 @@
 
     
   <url>
-    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
+    <loc>http://rizon.top/tech/build-blog/</loc>
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     <data>
         <display>
-        <title>hexo优化</title>
+        <title>搭建个人博客-hexo博客</title>
         <pubTime>2018-03-23T03:42:17.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -547,11 +565,11 @@
 
     
   <url>
-    <loc>http://rizon.top/tech/build-blog/</loc>
+    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     <data>
         <display>
-        <title>搭建个人博客-hexo博客</title>
+        <title>hexo优化</title>
         <pubTime>2018-03-23T03:42:17.000Z</pubTime>
         
         <tag>hexo</tag>
@@ -626,11 +644,11 @@
     
     
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>示例页面</title>
+        <title>Hello World</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
@@ -646,11 +664,11 @@
 
     
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>示例页面</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>

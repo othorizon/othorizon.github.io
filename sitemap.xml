@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rizon.top/tech/synology-nas-%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2019-02-21T13:12:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/tech/mac-finder%E4%B8%8D%E8%83%BD%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E7%8A%B6%E6%80%81%E5%9B%BE%E6%A0%87/</loc>
     
     <lastmod>2019-02-21T12:45:12.000Z</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/docker/docker-volume/</loc>
+    <loc>http://rizon.top/code/docker/docker/</loc>
     
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/code/docker/docker/</loc>
+    <loc>http://rizon.top/code/docker/docker-volume/</loc>
     
     <lastmod>2018-08-31T06:04:57.000Z</lastmod>
     
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://rizon.top/code/scriptbot/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/code/scriptbot/</loc>
+    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
@@ -212,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
+    <loc>http://rizon.top/tech/build-blog/</loc>
     
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/tech/build-blog/</loc>
+    <loc>http://rizon.top/tech/hexo%E4%BC%98%E5%8C%96/</loc>
     
     <lastmod>2018-03-23T03:42:17.000Z</lastmod>
     
@@ -261,14 +268,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     
