@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://rizon.top/tech/centos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
+    
+    <lastmod>2019-03-12T15:26:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://rizon.top/tool/index.html</loc>
     
     <lastmod>2019-03-04T03:55:32.898Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://rizon.top/tech/asciinema-share-screen/</loc>
     
     <lastmod>2018-08-31T19:52:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://rizon.top/tech/centos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</loc>
-    
-    <lastmod>2018-08-31T12:57:28.000Z</lastmod>
     
   </url>
   
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://rizon.top/code/scriptbot-refer/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/code/scriptbot-refer/</loc>
+    <loc>http://rizon.top/code/vue%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-05-17T09:57:57.000Z</lastmod>
     
@@ -149,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://rizon.top/code/idea%E4%B9%8B%E8%B7%AF/</loc>
+    <loc>http://rizon.top/code/js%E4%B9%8B%E8%B7%AF/</loc>
     
     <lastmod>2018-04-23T04:09:19.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://rizon.top/code/js%E4%B9%8B%E8%B7%AF/</loc>
+    <loc>http://rizon.top/code/idea%E4%B9%8B%E8%B7%AF/</loc>
     
     <lastmod>2018-04-23T04:09:19.000Z</lastmod>
     
