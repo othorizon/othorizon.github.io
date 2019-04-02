@@ -686,11 +686,11 @@
     
     
   <url>
-    <loc>http://rizon.top/demo/hello-world/</loc>
+    <loc>http://rizon.top/demo/example/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
+        <title>示例页面</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
@@ -706,11 +706,11 @@
 
     
   <url>
-    <loc>http://rizon.top/demo/example/</loc>
+    <loc>http://rizon.top/demo/hello-world/</loc>
     <lastmod>2018-03-20T03:50:20.000Z</lastmod>
     <data>
         <display>
-        <title>示例页面</title>
+        <title>Hello World</title>
         <pubTime>2018-03-15T15:29:21.000Z</pubTime>
         
         <tag>demo</tag>
