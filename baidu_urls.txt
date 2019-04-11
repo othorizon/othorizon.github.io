@@ -1,1 +1,1 @@
-http://rizon.top/tech/docker-tips/
+http://rizon.top/tech/开发协作运维辅助平台汇总与搭建/
