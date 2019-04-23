@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="地平线上">
 <meta property="og:description" content="群晖NAS系统搭建札记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-21T13:12:44.000Z">
+<meta property="og:updated_time" content="2019-04-23T09:45:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="synology-nas-搭建札记">
 <meta name="twitter:description" content="群晖NAS系统搭建札记">
@@ -409,8 +409,22 @@
             
             
               
+                
+              
             
 
+            
+              
+              <span class="post-meta-divider">|</span>
+              
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于：</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-23T17:45:49+08:00">2019-04-23</time>
             
           </span>
 
@@ -479,7 +493,22 @@
       
 
       
-        <p>待补充—–</p>
+        <ul>
+<li><a href="#一些docker应用">一些docker应用</a></li>
+<li><a href="#关于内网机器如何在外网访问的几种解决方案">关于内网机器如何在外网访问的几种解决方案</a><ul>
+<li><a href="#使用frp">使用FRP</a></li>
+<li><a href="#使用zerotier">使用Zerotier</a></li>
+<li><a href="#花生壳等收费方案">花生壳等收费方案</a></li>
+</ul>
+</li>
+</ul>
+<p>待补充—–<br><a id="more"></a></p>
+<h2 id="一些docker应用"><a href="#一些docker应用" class="headerlink" title="一些docker应用"></a>一些docker应用</h2><h2 id="关于内网机器如何在外网访问的几种解决方案"><a href="#关于内网机器如何在外网访问的几种解决方案" class="headerlink" title="关于内网机器如何在外网访问的几种解决方案"></a>关于内网机器如何在外网访问的几种解决方案</h2><h3 id="使用frp"><a href="#使用frp" class="headerlink" title="使用FRP"></a>使用FRP</h3><p><a href="https://github.com/fatedier/frp" rel="external nofollow noopener noreferrer" target="_blank">fatedier/frp</a><br>依赖：一台用公网IP的机器(可以用云主机)<br>优点：速度快，可以实现端口转发（只需要一台主机配置client，然后可以通过绑定不同的ip来实现转发到内网其他机器）<br>缺点：需要配置所有要用到的端口，需要开放相应端口的防火墙，公网机器对外暴漏缺乏安全性</p>
+<p>安装方式：<br>公网机器安装FRP的服务端，内网机器安装客户端</p>
+<h3 id="使用zerotier"><a href="#使用zerotier" class="headerlink" title="使用Zerotier"></a>使用Zerotier</h3><p><a href="http://zerotier.com/" rel="external nofollow noopener noreferrer" target="_blank">ZeroTier | Home</a><br>依赖：一台用公网IP的机器(可以用云主机)<br>优点：虚拟局域网的VPN方式操作更灵活，不会让你的机器暴漏到外网因此更安全<br>缺点：速度慢，需要VPN客户端（官方提供各个平台的客户端）</p>
+<p>安装方式：<br>安装到nas：可以通过套件中心安装（去官网下载），或者直接ssh到机器中安装，或者使用docker安装。<br>但是安装到nas存在一个严重问题：导致nas机器一直在运转，磁盘一直在响  </p>
+<p>安装到路由器：安装路由器的插件，或者ssh登录路由器安装</p>
+<h3 id="花生壳等收费方案"><a href="#花生壳等收费方案" class="headerlink" title="花生壳等收费方案"></a>花生壳等收费方案</h3><p>优点：安装简单(有路由器插件版本)<br>缺点：费用，不安全，受限制的</p>
 
       
     </div>
@@ -586,8 +615,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -750,6 +788,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些docker应用"><span class="nav-number">1.</span> <span class="nav-text">一些docker应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于内网机器如何在外网访问的几种解决方案"><span class="nav-number">2.</span> <span class="nav-text">关于内网机器如何在外网访问的几种解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用frp"><span class="nav-number">2.1.</span> <span class="nav-text">使用FRP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zerotier"><span class="nav-number">2.2.</span> <span class="nav-text">使用Zerotier</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#花生壳等收费方案"><span class="nav-number">2.3.</span> <span class="nav-text">花生壳等收费方案</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
