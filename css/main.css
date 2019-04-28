@@ -2012,7 +2012,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #99dea3;
+  background: #66718b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3188,7 +3188,7 @@ body {
   opacity: 0.95;
 }
 .site-meta {
-  background-image: url("https://ws1.sinaimg.cn/large/7dc65329ly1fpxdiql94xj20t10djdi6.jpg");
+  background-image: url("/assets/images/banner.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
